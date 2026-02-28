@@ -4,8 +4,14 @@ const navLinks = document.querySelectorAll(".nav-link");
 const projectsGrid = document.getElementById("projectsGrid");
 const sections = document.querySelectorAll("section[id]");
 
-navToggle.addEventListener("click", () => navMenu.classList.toggle("open"));
-navLinks.forEach(link => link.addEventListener("click", () => navMenu.classList.remove("open")));
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+  navToggle.classList.toggle("open");
+});
+navLinks.forEach(link => link.addEventListener("click", () => {
+  navMenu.classList.remove("open");
+  navToggle.classList.remove("open");
+}));
 
 function renderProjects() {
   projectsGrid.innerHTML = projects.map(p => `
