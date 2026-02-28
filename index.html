@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Victor Eugbaju Portfolio</title>
+  <link rel="stylesheet" href="src/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <img class="nav-logo" src="src/assets/victor-logo.svg" alt="Victor Logo">
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="#contact">Contact Me</a>
+      <button class="nav-toggle" id="navToggle">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Hi, I’m</p>
+          <h1 class="hero-title">Victor Elugbaju</h1>
+          <p class="hero-subtitle">Product Designer</p>
+          <div class="hero-socials">
+            <a class="social" href="https://x.com/victorelugbaju?s=21/" target="_blank" rel="noopener noreferrer">
+              <img src="src/assets/x-logo.svg" alt="X" class="social-icon">
+            </a>
+            <a class="social" href="https://www.linkedin.com/in/victor-elugbaju?/" target="_blank" rel="noopener noreferrer">
+              <img src="src/assets/linkedin-logo.svg" alt="LinkedIn" class="social-icon">
+            </a>
+            <a class="social" href="https://behance.net/victorelugbaju/" target="_blank" rel="noopener noreferrer">
+              <img src="src/assets/behance-logo.svg" alt="Behance" class="social-icon">
+            </a>
+          </div>
+          <a class="btn" href="#projects">See My Projects</a>
+        </div>
+        <div class="hero-image-wrap">
+          <img class="hero-image" src="src/assets/profile-photo.JPG" alt="Victor Elugbaju">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p class="section-lead">
+          I’m a UI/UX designer focused on building digital products that solve real problems. I design clean, intuitive interfaces that balance usability, clarity, and visual impact. I enjoy translating complex systems into experiences that feel simple and effortless to use. Currently, I’m sharpening my frontend skills to better understand how products are built.
+        </p>
+        <div class="about-grid">
+          <div class="card">
+            <h3 class="card-title">Skills</h3>
+            <ul class="list">
+              <li>HTML, CSS, JavaScript</li>
+              <li>Responsive Design</li>
+              <li>Figma / UI Design</li>
+              <li>UX Research Basics</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Education</h3>
+            <ul class="list">
+              <li>B. Agr (1st Class Hons)</li>
+              <li>Lagos State University (2024)</li>
+              <li>Animal Science</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Interests</h3>
+            <ul class="list">
+              <li>Design systems</li>
+              <li>Product thinking</li>
+              <li>AI + creativity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-lead">These are some things I’ve built / designed.</p>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-lead">Reach out through the form below.</p>
+        <form class="form">
+          <div class="form-row">
+            <label class="label" for="name">Name</label>
+            <input class="input" id="name" type="text" placeholder="Your name">
+          </div>
+          <div class="form-row">
+            <label class="label" for="email">Email</label>
+            <input class="input" id="email" type="email" placeholder="you@email.com">
+          </div>
+          <div class="form-row">
+            <label class="label" for="message">Message</label>
+            <textarea class="textarea" id="message" rows="5" placeholder="Write your message..."></textarea>
+          </div>
+          <button class="btn" type="button">Send Message</button>
+        </form>
+        <footer class="footer">
+          <p>© <span id="year"></span> Victor Elugbaju. All rights reserved.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+  <script src="src/script/data.js"></script>
+  <script src="src/script/app.js"></script>
+</body>
+</html>
