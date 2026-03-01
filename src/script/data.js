@@ -2,7 +2,7 @@ const projects = [
   {
     id: 1,
     name: "Profile Website",
-    image: "src/assets/profile-photo.JPG",
+    image: "src/assets/profile-website-image.JPG",
     description: "This is a fully responsive personal profile website built to present identity, skills, and projects in a clear and structured way.",
     liveLink: "https://victorelugbaju.github.io/profile-website/"
   },
@@ -12,7 +12,6 @@ const projects = [
     image: "src/assets/landing-page.png",
     description: "This fashion e-commerce website was designed as a modern clothing brand platform focused on visual appeal and seamless shopping flow.",
     liveLink: "https://victorelugbaju.github.io/landing-page/"
-
   },
   {
     id: 3,
