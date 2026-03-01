@@ -1,7 +1,6 @@
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
 const navLinks = document.querySelectorAll(".nav-link");
-const projectsGrid = document.getElementById("projectsGrid");
 const sections = document.querySelectorAll("section[id]");
 
 navToggle.addEventListener("click", () => {
@@ -14,13 +13,16 @@ navLinks.forEach(link => link.addEventListener("click", () => {
 }));
 
 function renderProjects() {
-  projectsGrid.innerHTML = projects.map(p => `
-    <article class="project">
-      <img class="project-img" src="${p.image}" alt="${p.name}">
+  const container = document.getElementById("projectsGrid");
+  if (!container || !projects) return;
+  
+  container.innerHTML = projects.map(project => `
+    <article class="project" data-id="${project.id}">
+      <img class="project-img" src="${project.image}" alt="${project.name}">
       <div class="project-body">
-        <h3 class="project-name">${p.name}</h3>
-        <p class="project-desc">${p.description}</p>
-        <a class="project-link" href="${p.liveLink}" target="_blank" rel="noopener noreferrer">View Project</a>
+        <h3 class="project-name">${project.name}</h3>
+        <p class="project-desc">${project.description}</p>
+        <a class="project-link" href="${project.liveLink}" target="_blank" rel="noopener noreferrer">View Project</a>
       </div>
     </article>`).join("");
 }
