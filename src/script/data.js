@@ -2,7 +2,7 @@ const projects = [
   {
     id: 1,
     name: "Profile Website",
-    image: "src/assets/profile-website-image.jpg",
+    image: "src/assets/profile-photo.jpg",
     description: "This is a fully responsive personal profile website built to present identity, skills, and projects in a clear and structured way.",
     liveLink: "https://victorelugbaju.github.io/profile-website/"
   },

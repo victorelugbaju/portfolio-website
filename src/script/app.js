@@ -17,7 +17,7 @@ function renderProjects() {
   if (!container || !projects) return;
   
   container.innerHTML = projects.map(project => `
-    <article class="project" data-id="${project.id}">
+    <article class="project" data-url="${project.liveLink}" style="cursor: pointer;">
       <img class="project-img" src="${project.image}" alt="${project.name}">
       <div class="project-body">
         <h3 class="project-name">${project.name}</h3>
@@ -25,6 +25,13 @@ function renderProjects() {
         <a class="project-link" href="${project.liveLink}" target="_blank" rel="noopener noreferrer">View Project</a>
       </div>
     </article>`).join("");
+
+  const projectCards = container.querySelectorAll('.project');
+  projectCards.forEach(card => card.addEventListener('click', (e) => {
+    if (e.target.tagName.toLowerCase() !== 'a') {
+      window.open(card.getAttribute('data-url'), '_blank');
+    }
+  }));
 }
 renderProjects();
 

@@ -320,6 +320,7 @@ img { max-width: 100%; display: block; }
   display: grid;
   box-shadow: 0 2px 12px #00000033;
   transition: all 0.35s ease;
+  position: relative;
 }
 
 .project:hover {
@@ -364,6 +365,16 @@ img { max-width: 100%; display: block; }
 .project-link:hover {
   border-bottom-color: #FF7B00;
   transform: translateX(4px);
+}
+
+.project-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 
